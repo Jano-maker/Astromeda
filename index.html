@@ -1,0 +1,379 @@
+<!DOCTYPE html>
+<html lang="es" data-tema="claro">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <title>Astromedia — Estudio de animación digital</title>
+  <meta name="description" content="Astromedia es un estudio de animación digital especializado en animación 2D, 3D y motion graphics. Descubre los trabajos del estudio y contacta con el equipo." />
+  <meta name="author" content="Astromedia" />
+  <meta name="theme-color" id="meta-theme-color" content="#F3DFEF" />
+
+  <link rel="icon" type="image/png" href="images/favicon.png" />
+  <link rel="apple-touch-icon" href="images/favicon.png" />
+
+  <!-- Open Graph: al publicar, usa URLs absolutas en og:url, og:image y twitter:image. -->
+  <meta property="og:type" content="website" />
+  <meta property="og:locale" content="es_ES" />
+  <meta property="og:site_name" content="Astromedia" />
+  <meta property="og:title" content="Astromedia — Estudio de animación digital" />
+  <meta property="og:description" content="Animación 2D, 3D y motion graphics. Un estudio que convierte ideas en movimiento." />
+  <meta property="og:image" content="images/og-image.png" />
+  <meta property="og:url" content="https://www.astromedia.ejemplo/" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Astromedia — Estudio de animación digital" />
+  <meta name="twitter:description" content="Animación 2D, 3D y motion graphics. Un estudio que convierte ideas en movimiento." />
+  <meta name="twitter:image" content="images/og-image.png" />
+
+  <!-- TEMA: aplica el tema guardado antes de pintar la página para evitar un destello. -->
+  <script>
+    (function () {
+      var tema = 'claro';
+
+      try {
+        var guardado = localStorage.getItem('tema');
+
+        if (guardado === 'claro' || guardado === 'oscuro') {
+          tema = guardado;
+        } else if (window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches) {
+          tema = 'oscuro';
+        }
+      } catch (error) {
+        // Si el navegador bloquea localStorage, se usa el tema claro.
+      }
+
+      document.documentElement.setAttribute('data-tema', tema);
+
+      var metaTema = document.querySelector('meta[name="theme-color"]');
+
+      if (metaTema) {
+        metaTema.setAttribute('content', tema === 'oscuro' ? '#1A1022' : '#F3DFEF');
+      }
+    })();
+  </script>
+
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <a class="skip-link" href="#contenido">Saltar al contenido</a>
+
+  <header class="site-header">
+    <div class="container header__inner">
+      <a class="logo" href="#inicio" aria-label="Astromedia — Ir al inicio">
+        <img class="logo__img" src="images/logo.png" alt="Astromedia" width="1400" height="615" />
+      </a>
+
+      <nav class="nav" id="menu-principal" aria-label="Navegación principal">
+        <ul class="nav__list">
+          <li><a href="#inicio">Inicio</a></li>
+          <li><a href="#trabajos">Trabajos</a></li>
+          <li><a href="#equipo">Equipo</a></li>
+          <li><a href="#servicios">Servicios</a></li>
+          <li><a href="#contacto">Contacto</a></li>
+        </ul>
+      </nav>
+
+      <div class="header__actions">
+        <button class="theme-toggle" type="button" aria-label="Cambiar a modo oscuro" aria-pressed="false">
+          <span class="theme-toggle__icon" aria-hidden="true">
+            <svg class="theme-toggle__moon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M20 14.5A8.5 8.5 0 0 1 9.5 4a8.5 8.5 0 1 0 10.5 10.5Z" />
+            </svg>
+            <svg class="theme-toggle__sun" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round">
+              <circle cx="12" cy="12" r="4" />
+              <path d="M12 2v2M12 20v2M4.93 4.93l1.41 1.41M17.66 17.66l1.41 1.41M2 12h2M20 12h2M4.93 19.07l1.41-1.41M17.66 6.34l1.41-1.41" />
+            </svg>
+          </span>
+          <span class="theme-toggle__text" aria-hidden="true">Oscuro</span>
+        </button>
+
+        <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="menu-principal" aria-label="Abrir menú">
+          <span class="menu-toggle__text" aria-hidden="true">Menú</span>
+          <span class="menu-toggle__icon" aria-hidden="true">
+            <span></span>
+            <span></span>
+          </span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <main id="contenido" tabindex="-1">
+
+    <!-- INICIO -->
+    <section class="hero" id="inicio" aria-labelledby="hero-titulo">
+      <div class="container hero__inner">
+        <div class="hero__content">
+          <img class="hero__logo" src="images/logo.png" alt="Astromedia" width="1400" height="615" />
+          <h1 id="hero-titulo">Dibujamos el movimiento.</h1>
+          <p class="hero__text">Un estudio de animación que convierte ideas en movimiento: 2D, 3D y motion graphics, del primer boceto al último fotograma.</p>
+          <a class="btn" href="#contacto">Hablemos de tu proyecto</a>
+        </div>
+
+        <div class="hero__panel">
+          <svg class="hero__star" viewBox="0 0 200 200" aria-hidden="true" focusable="false">
+            <path d="M100 0C104 72 128 96 200 100C128 104 104 128 100 200C96 128 72 104 0 100C72 96 96 72 100 0Z" fill="none" stroke="currentColor" stroke-width="1.2" />
+          </svg>
+          <p class="hero__caption">
+            <span>Animación 2D</span>
+            <span>Animación 3D</span>
+            <span>Motion graphics</span>
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- TRABAJOS -->
+    <section class="section section--projects" id="trabajos" aria-labelledby="trabajos-titulo">
+      <svg class="section-star" viewBox="0 0 200 200" aria-hidden="true" focusable="false">
+        <path d="M100 0C104 72 128 96 200 100C128 104 104 128 100 200C96 128 72 104 0 100C72 96 96 72 100 0Z" fill="none" stroke="currentColor" stroke-width="0.8" />
+      </svg>
+      <div class="container">
+        <header class="section-head">
+          <h2 id="trabajos-titulo">Trabajos</h2>
+          <p class="section-head__intro">Seis piezas de ejemplo para mostrar el formato del portafolio. Sustituye las portadas, los títulos y los videos por los trabajos reales.</p>
+        </header>
+
+        <!-- PROYECTOS: edita portada, título, descripción, categoría y data-video.
+             Vimeo: https://player.vimeo.com/video/ID?autoplay=1
+             YouTube: https://www.youtube-nocookie.com/embed/ID?autoplay=1&rel=0 -->
+        <div class="projects-grid">
+
+          <a class="project-card" href="https://vimeo.com/110421448" data-video="https://player.vimeo.com/video/110421448?autoplay=1" data-title="Corto espacial — video de ejemplo" aria-label="Ver video de ejemplo: Corto espacial" aria-haspopup="dialog">
+            <div class="project-card__media">
+              <img class="project-card__image" src="images/proyecto-01.svg" alt="Portada de ejemplo con una estrella blanca sobre fondo violeta" width="800" height="450" loading="lazy" />
+              <span class="project-card__play" aria-hidden="true"></span>
+            </div>
+            <div class="project-card__body">
+              <p class="project-card__meta">Animación 3D <span class="project-card__demo">Ejemplo</span></p>
+              <h3 class="project-card__title">Corto espacial</h3>
+              <p class="project-card__text">Un cortometraje de animación 3D con estética cósmica.</p>
+            </div>
+          </a>
+
+          <a class="project-card" href="https://vimeo.com/103583307" data-video="https://player.vimeo.com/video/103583307?autoplay=1" data-title="Spot de producto — video de ejemplo" aria-label="Ver video de ejemplo: Spot de producto" aria-haspopup="dialog">
+            <div class="project-card__media">
+              <img class="project-card__image" src="images/proyecto-02.svg" alt="Portada de ejemplo con un círculo oscuro sobre fondo ámbar" width="800" height="450" loading="lazy" />
+              <span class="project-card__play" aria-hidden="true"></span>
+            </div>
+            <div class="project-card__body">
+              <p class="project-card__meta">Motion graphics <span class="project-card__demo">Ejemplo</span></p>
+              <h3 class="project-card__title">Spot de producto</h3>
+              <p class="project-card__text">Una pieza breve de motion graphics para una marca.</p>
+            </div>
+          </a>
+
+          <a class="project-card" href="https://vimeo.com/427022516" data-video="https://player.vimeo.com/video/427022516?autoplay=1" data-title="Serie infantil — video de ejemplo" aria-label="Ver video de ejemplo: Serie infantil" aria-haspopup="dialog">
+            <div class="project-card__media">
+              <img class="project-card__image" src="images/proyecto-03.svg" alt="Portada de ejemplo con un arco violeta sobre fondo lila" width="800" height="450" loading="lazy" />
+              <span class="project-card__play" aria-hidden="true"></span>
+            </div>
+            <div class="project-card__body">
+              <p class="project-card__meta">Animación 2D <span class="project-card__demo">Ejemplo</span></p>
+              <h3 class="project-card__title">Serie infantil</h3>
+              <p class="project-card__text">Personajes y escenarios para una serie de animación 2D.</p>
+            </div>
+          </a>
+
+          <a class="project-card" href="https://vimeo.com/96300915" data-video="https://player.vimeo.com/video/96300915?autoplay=1" data-title="Tráiler de videojuego — video de ejemplo" aria-label="Ver video de ejemplo: Tráiler de videojuego" aria-haspopup="dialog">
+            <div class="project-card__media">
+              <img class="project-card__image" src="images/proyecto-04.svg" alt="Portada de ejemplo con una estrella ámbar sobre fondo oscuro" width="800" height="450" loading="lazy" />
+              <span class="project-card__play" aria-hidden="true"></span>
+            </div>
+            <div class="project-card__body">
+              <p class="project-card__meta">Animación 3D <span class="project-card__demo">Ejemplo</span></p>
+              <h3 class="project-card__title">Tráiler de videojuego</h3>
+              <p class="project-card__text">Una secuencia de acción animada en 3D para un tráiler.</p>
+            </div>
+          </a>
+
+          <a class="project-card" href="https://vimeo.com/449749100" data-video="https://player.vimeo.com/video/449749100?autoplay=1" data-title="Identidad animada — video de ejemplo" aria-label="Ver video de ejemplo: Identidad animada" aria-haspopup="dialog">
+            <div class="project-card__media">
+              <img class="project-card__image" src="images/proyecto-05.svg" alt="Portada de ejemplo con un círculo violeta sobre fondo claro" width="800" height="450" loading="lazy" />
+              <span class="project-card__play" aria-hidden="true"></span>
+            </div>
+            <div class="project-card__body">
+              <p class="project-card__meta">Motion graphics <span class="project-card__demo">Ejemplo</span></p>
+              <h3 class="project-card__title">Identidad animada</h3>
+              <p class="project-card__text">Logotipo y transiciones animadas para una marca.</p>
+            </div>
+          </a>
+
+          <a class="project-card" href="https://vimeo.com/23896040" data-video="https://player.vimeo.com/video/23896040?autoplay=1" data-title="Piloto de serie — video de ejemplo" aria-label="Ver video de ejemplo: Piloto de serie" aria-haspopup="dialog">
+            <div class="project-card__media">
+              <img class="project-card__image" src="images/proyecto-06.svg" alt="Portada de ejemplo con una estrella lila sobre fondo negro" width="800" height="450" loading="lazy" />
+              <span class="project-card__play" aria-hidden="true"></span>
+            </div>
+            <div class="project-card__body">
+              <p class="project-card__meta">Animación 2D <span class="project-card__demo">Ejemplo</span></p>
+              <h3 class="project-card__title">Piloto de serie</h3>
+              <p class="project-card__text">Un episodio piloto de animación 2D con estilo propio.</p>
+            </div>
+          </a>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- EQUIPO -->
+    <section class="section section--team" id="equipo" aria-labelledby="equipo-titulo">
+      <div class="container">
+        <header class="section-head">
+          <h2 id="equipo-titulo">Equipo</h2>
+          <p class="section-head__intro">Cuatro fichas. Donde nace la magia.(no sé cuantos son)</p>
+        </header>
+
+        <!-- MIEMBROS: cambia foto, nombre, rol y enlace. Actualiza también el aria-label. -->
+        <ul class="team-grid">
+          <li class="team-card">
+            <img class="team-card__photo" src="images/miembro-01.svg" alt="Foto de ejemplo de Nombre Ejemplo 1, silueta sobre fondo violeta" width="800" height="1000" loading="lazy" />
+            <div class="team-card__body">
+              <h3 class="team-card__name">El nano</h3>
+              <p class="team-card__role">Dirección de animación</p>
+              <a class="team-card__link" href="https://www.artstation.com/" target="_blank" rel="noopener noreferrer" aria-label="Perfil de ejemplo de El nano en ArtStation">ArtStation</a>
+            </div>
+          </li>
+
+          <li class="team-card">
+            <img class="team-card__photo" src="images/miembro-02.svg" alt="Foto de ejemplo de La kyu, silueta sobre fondo ámbar" width="800" height="1000" loading="lazy" />
+            <div class="team-card__body">
+              <h3 class="team-card__name">La kyu</h3>
+              <p class="team-card__role">Animación 2D</p>
+              <a class="team-card__link" href="https://www.artstation.com/" target="_blank" rel="noopener noreferrer" aria-label="Perfil de ejemplo de La kyu en ArtStation">ArtStation</a>
+            </div>
+          </li>
+
+          <li class="team-card">
+            <img class="team-card__photo" src="images/miembro-03.svg" alt="Foto de ejemplo de Ejemplo 3, silueta sobre fondo lila" width="800" height="1000" loading="lazy" />
+            <div class="team-card__body">
+              <h3 class="team-card__name">Ejemplo 3</h3>
+              <p class="team-card__role">Modelado y animación 3D</p>
+              <a class="team-card__link" href="https://www.linkedin.com/" target="_blank" rel="noopener noreferrer" aria-label="Perfil de ejemplo de Nombre Ejemplo 3 en LinkedIn">LinkedIn</a>
+            </div>
+          </li>
+
+          <li class="team-card">
+            <img class="team-card__photo" src="images/miembro-04.svg" alt="Foto de ejemplo de Ejemplo 4, silueta sobre fondo oscuro" width="800" height="1000" loading="lazy" />
+            <div class="team-card__body">
+              <h3 class="team-card__name">Ejemplo 4</h3>
+              <p class="team-card__role">Motion graphics</p>
+              <a class="team-card__link" href="https://www.linkedin.com/" target="_blank" rel="noopener noreferrer" aria-label="Perfil de ejemplo de Nombre Ejemplo 4 en LinkedIn">LinkedIn</a>
+            </div>
+          </li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- SERVICIOS -->
+    <section class="section" id="servicios" aria-labelledby="servicios-titulo">
+      <div class="container services-layout">
+        <header class="section-head section-head--sticky">
+          <h2 id="servicios-titulo">Servicios</h2>
+          <p class="section-head__intro">Tres servicios de ejemplo.</p>
+        </header>
+
+        <ul class="services-list">
+          <li class="service">
+            <h3>Animación 2D</h3>
+            <p>Animación de personajes y escenarios dibujados fotograma a fotograma.</p>
+          </li>
+          <li class="service">
+            <h3>Animación 3D</h3>
+            <p>Modelado, iluminación y animación de personajes y entornos en tres dimensiones.</p>
+          </li>
+          <li class="service">
+            <h3>Motion graphics</h3>
+            <p>Gráficos en movimiento, títulos y piezas animadas para marcas y redes.</p>
+          </li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- CONTACTO -->
+    <section class="section section--contact" id="contacto" aria-labelledby="contacto-titulo">
+      <svg class="contact-star" viewBox="0 0 200 200" aria-hidden="true" focusable="false">
+        <path d="M100 0C104 72 128 96 200 100C128 104 104 128 100 200C96 128 72 104 0 100C72 96 96 72 100 0Z" fill="none" stroke="currentColor" stroke-width="0.8" />
+      </svg>
+
+      <div class="container">
+        <header class="section-head section-head--dark">
+          <h2 id="contacto-titulo">Cuéntanos tu proyecto</h2>
+          <p class="section-head__intro">¿Tienes una idea, un guion o una marca que animar? Escríbenos y te responderemos.</p>
+        </header>
+
+        <div class="contact-grid">
+          <div class="contact-info">
+            <a class="contact-info__email" href="mailto:studiocryus@gmail.com">studiocryus@gmail.com</a>
+
+            <dl class="contact-details">
+              <div>
+                <dt>Teléfono</dt>
+                <dd><a href="tel:+56900000000">+56 9 0000 0000</a></dd>
+              </div>
+              <div>
+                <dt>Estudio</dt>
+                <dd>Temuco, Chile</dd>
+              </div>
+            </dl>
+
+            <div class="socials">
+              <p class="socials__title">Redes</p>
+              <ul class="social-list">
+                <li><a href="https://www.instagram.com/studio_cryus" target="_blank" rel="noopener noreferrer">Instagram</a></li>
+                <li><a href="https://vimeo.com/" target="_blank" rel="noopener noreferrer">Vimeo</a></li>
+                <li><a href="https://www.linkedin.com/" target="_blank" rel="noopener noreferrer">LinkedIn</a></li>
+              </ul>
+            </div>
+          </div>
+
+          <!-- FORMULARIO — PUNTO DE CONEXIÓN
+               Formspree: crea un formulario en formspree.io y sustituye REEMPLAZA_TU_ID.
+               Netlify Forms: añade data-netlify="true" y elimina o cambia action. -->
+          <form class="contact-form" name="contacto" action="https://formspree.io/f/REEMPLAZA_TU_ID" method="POST">
+            <h3 class="contact-form__title">Escríbenos</h3>
+            <p class="contact-form__note">Todos los campos son obligatorios.</p>
+
+            <div class="field">
+              <label for="nombre">Nombre</label>
+              <input id="nombre" name="nombre" type="text" autocomplete="name" required />
+            </div>
+
+            <div class="field">
+              <label for="email">Email</label>
+              <input id="email" name="email" type="email" autocomplete="email" required />
+            </div>
+
+            <div class="field">
+              <label for="mensaje">Mensaje</label>
+              <textarea id="mensaje" name="mensaje" rows="6" required></textarea>
+            </div>
+
+            <button class="btn btn--full" type="submit">Enviar mensaje</button>
+            <p class="form-status" id="form-estado" role="status" aria-live="polite"></p>
+          </form>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer__inner">
+      <img class="footer__logo" src="images/logo-blanco.png" alt="Astromedia" width="1400" height="615" loading="lazy" />
+      <p class="footer__text">© <span id="anio">2026</span> Astromedia</p>
+    </div>
+  </footer>
+
+  <dialog class="modal" id="modal-proyecto" aria-labelledby="modal-titulo">
+    <div class="modal__content">
+      <div class="modal__header">
+        <h2 class="modal__title" id="modal-titulo">Video del proyecto</h2>
+        <button class="modal__close" type="button" aria-label="Cerrar video">Cerrar</button>
+      </div>
+      <div class="modal__video" id="modal-video"></div>
+    </div>
+  </dialog>
+
+  <script src="app.js"></script>
+</body>
+</html>
